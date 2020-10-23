@@ -51,5 +51,6 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.Flags().String("url", "", "Please provide a url")
+	rootCmd.Flags().StringP("url", "u", "", "provide a url")
+	_ = rootCmd.MarkFlagRequired("url")
 }
